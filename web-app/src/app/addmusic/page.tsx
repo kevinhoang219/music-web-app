@@ -1,10 +1,10 @@
 import Content from '../../components/Content';
-import UnauthenticatedView from '@/components/UnauthenticatedView';
+import SearchItunes from '@/components/SearchItunes';
 
 const About = () => {
     return (
     <Content>
-    <UnauthenticatedView />
+    <SearchItunes/>
     </Content>
     )
 };

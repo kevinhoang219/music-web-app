@@ -6,7 +6,6 @@ export default function Home() {
   connectMongoDB();
   return (
     <div>
-      <Navbar />
       <Welcome/>
     </div>
   )

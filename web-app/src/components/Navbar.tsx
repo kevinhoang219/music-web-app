@@ -19,7 +19,7 @@ const Navbar = () => {
 
       {/* Leaderboard */}
       <div className="flex gap-4 items-center">
-        <Link href="/leaderboard" className="hover:underline font-bold">Leaderboard</Link>
+        <Link href="/addmusic" className="hover:underline font-bold">Search Music</Link>
       </div>
 
       {/* My Profile and User Name */}
