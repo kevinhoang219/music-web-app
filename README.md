@@ -1,7 +1,6 @@
-# 🎵 TuneTribe
+# 🎵 Jukebox
 #### Group Members: Isabel Beck, Shakine Hardaway, Kevin Hoang, Karsen Phillips
-The purpose of **TuneTribe** is to connect college students through music. User profiles display artists the user listens to and include a bio where users can share information about themselves such as their major, year, and other details. There is also a leaderboard page that ranks users on how much they listen to a specified artist.
-
+**Jukebox** aims to enrich UGA students with song discovery and playlist creation. Users will sign up and create an account to store their finds along their musical journey. When logged in, users can search through a catalog, listen to snippets, and add them to their playlist. Otherwise, users who are not signed in can only search for songs to preview and listen to.
 ## Getting Started
 
 First, cd into the app folder:
