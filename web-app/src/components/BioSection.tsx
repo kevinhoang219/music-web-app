@@ -33,17 +33,17 @@ const BioSection = () => {
                     rows={4}
                 />
                 <div className="mt-2">
-                    <button onClick={handleSave} className="mr-2 bg-orange-500 text-white hover:bg-orange-300 hover:text-white p-1 rounded">
+                    <button onClick={handleSave} className="mr-2 bg-red-700 text-white hover:bg-red-300 hover:text-white p-1 rounded">
                     Save
                     </button>
-                    <button onClick={handleCancel} className="bg-red-700 text-white hover:bg-red-300 hover:text-white p-1 rounded">
+                    <button onClick={handleCancel} className="bg-black text-white hover:bg-red-300 hover:text-white p-1 rounded">
                     Cancel
                     </button>
                 </div>
                 </div>
             ) : (
                 <div>
-                    <button onClick={handleEdit} className="mt-5 mr-2 bg-orange-500 text-white hover:bg-orange-300 hover:text-white p-1 rounded">
+                    <button onClick={handleEdit} className="mt-5 mr-2 bg-red-700 text-white hover:bg-red-300 hover:text-white p-1 rounded">
                         Edit Bio
                     </button>
                 </div>

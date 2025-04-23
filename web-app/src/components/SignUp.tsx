@@ -88,10 +88,10 @@ const SignUp = ({ onAddUser } : signUpProps) => {
             placeholder="Enter image URL"
           />
   
-          <button type="submit" disabled={!formData.username || !formData.password} className="mt-4 bg-orange-500 text-white hover:bg-orange-300 hover:text-white p-2 rounded">Sign Up</button>
+          <button type="submit" disabled={!formData.username || !formData.password} className="mt-4 bg-red-600 text-white hover:bg-red-300 hover:text-white p-2 rounded">Sign Up</button>
         </form>
         <h2 className='mt-4'>Already have an account? </h2>
-        <button onClick={gotoSignin} className="mt-4 bg-orange-500 text-white hover:bg-orange-300 hover:text-white p-2 rounded">Sign in</button>
+        <button onClick={gotoSignin} className="mt-4 bg-red-600 text-white hover:bg-red-300 hover:text-white p-2 rounded">Sign in</button>
       </div>
   );
 }

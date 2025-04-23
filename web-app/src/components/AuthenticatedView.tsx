@@ -10,10 +10,10 @@ const AuthenticatedView = () => {
     return (
     <div className="min-h-screen bg-white flex flex-col justify-items-center">
       <div className='flex flex-row justify-center'>
-        <div className="mx-2 max-w-5xl mt-8 px-4 grid gap-8 items-center border-orange-500 p-4 rounded border-3">
+        <div className="mx-2 max-w-5xl mt-8 px-4 grid gap-8 items-center border-red-600 p-4 rounded border-3">
           <h1 className="text-5xl font-bold capitalize">{session?.user.name}</h1> 
         </div>
-        <div className="max-w-5xl mx-2 mt-8 px-4 grid gap-8 items-center border-orange-500 p-4 rounded border-3">
+        <div className="max-w-5xl mx-2 mt-8 px-4 grid gap-8 items-center border-red-700 p-4 rounded border-3">
           <BioSection/>
       </div>
       </div>

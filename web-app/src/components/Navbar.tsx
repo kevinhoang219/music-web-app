@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-orange-500 text-white px-6 py-4 flex justify-between items-center sticky top-0 z-50">
+    <nav className="bg-red-700 text-white px-6 py-4 flex justify-between items-center sticky top-0 z-50">
       {/* App Name */}
       <Link href="/" className="text-lg font-bold">Jukebox</Link>
 
@@ -36,14 +36,14 @@ const Navbar = () => {
           {!session ? (
             <button
               onClick={handleLogin}
-              className="flex items-center text-orange-600 bg-neutral-50 hover:bg-orange-300 hover:text-white rounded-md px-3 py-2"
+              className="flex items-center text-red-700 bg-neutral-50 hover:bg-red-400 hover:text-white rounded-md px-3 py-2"
             >
               <span>Login</span>
             </button>
           ) : (
             <button
               onClick={() => signOut()}
-              className="flex items-center text-orange-600 bg-neutral-50 hover:bg-orange-300 hover:text-white rounded-md px-3 py-2"
+              className="flex items-center text-red-700 bg-neutral-50 hover:bg-red-400 hover:text-white rounded-md px-3 py-2"
             >
               <span>Logout</span>
             </button>

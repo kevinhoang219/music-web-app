@@ -14,17 +14,17 @@ const Welcome = () => {
     return (
       <div className='px-10 mt-10'>
         <div className='flex flex-col items-center justify-center'>
-            <h1 className= 'text-6xl font-bold text-orange-500'>Jukebox </h1>
+            <h1 className= 'text-6xl font-bold text-red-700'>Jukebox </h1>
             <p className='text-left text-l mt-3 mb-5'>Have fun with music, create playlists, and view your favorite artists, genres, and songs!</p>
             <div className="max-w-xs text-center bg-white p-4 rounded-xl border border-gray-400">
-              <button onClick={goToSignup} className="bg-orange-500 text-white hover:bg-orange-300 hover:text-white px-3 py-2">
+              <button onClick={goToSignup} className="bg-red-700 text-white hover:bg-red-400 hover:text-white px-3 py-2">
                 Sign Up
               </button>
             </div>
         </div>
 
-        <div className="border-t-4 border-orange-500 my-12 w-3/4 mx-auto"></div>
-        <h1 className='flex items-center justify-center mt-10 mb-4 text-5xl font-bold text-orange-500'>Features</h1>
+        <div className="border-t-4 border-red-700 my-12 w-3/4 mx-auto"></div>
+        <h1 className='flex items-center justify-center mt-10 mb-4 text-5xl font-bold text-red-700'>Features</h1>
         
         <div className="min-h-full flex items-center justify-center">
           <div className="border border-gray-400 shadow bg-white bg-opacity-80 p-8 rounded-lg shadow-md max-w-md w-full text-center m-4">
