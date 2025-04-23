@@ -17,8 +17,7 @@ const AuthenticatedView = () => {
           <BioSection/>
       </div>
       </div>
-      <div className='flex flex-col items-center min-h-screen bg-white py-3 mt-8'>
-      
+      <div className='flex flex-col items-center min-h-screen bg-white mt-4'>
       <Content>
         <DisplaySongs/>
       </Content>
