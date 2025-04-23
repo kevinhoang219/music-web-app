@@ -36,14 +36,14 @@ const Navbar = () => {
           {!session ? (
             <button
               onClick={handleLogin}
-              className="flex items-center text-red-700 bg-neutral-50 hover:bg-red-400 hover:text-white rounded-md px-3 py-2"
+              className="flex items-center text-red-700 bg-neutral-50 hover:bg-red-900 hover:text-white rounded-md px-3 py-2"
             >
               <span>Login</span>
             </button>
           ) : (
             <button
               onClick={() => signOut()}
-              className="flex items-center text-red-700 bg-neutral-50 hover:bg-red-400 hover:text-white rounded-md px-3 py-2"
+              className="flex items-center text-red-700 bg-neutral-50 hover:bg-red-900 hover:text-white rounded-md px-3 py-2"
             >
               <span>Logout</span>
             </button>
