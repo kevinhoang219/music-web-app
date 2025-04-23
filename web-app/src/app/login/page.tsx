@@ -28,7 +28,7 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-white py-3">
+    <div className="flex flex-col justify-center items-center min-h-screen bg-white">
       <h1 className="text-4xl font-bold mb-4 text-center">Sign in</h1>
     <form onSubmit={handleSubmit} className='flex flex-col gap-2 border border-black rounded p-3'>
       {formError && <p className="text-red-500">{formError}</p>}
@@ -48,7 +48,7 @@ export default function LoginForm() {
         onChange={(e) => setPassword(e.target.value)}
         required
       />
-      <button type="submit" className="mt-4 bg-orange-500 text-white hover:bg-orange-300 hover:text-white p-2 rounded">Sign In</button>
+      <button type="submit" className="mt-4 bg-red-700 text-white hover:bg-red-400 hover:text-white p-2 rounded">Sign In</button>
     </form>
     </div>
   );

@@ -17,7 +17,7 @@ const Welcome = () => {
             <h1 className= 'text-6xl font-bold text-red-700'>Jukebox </h1>
             <p className='text-left text-l mt-3 mb-5'>Have fun with music, create playlists, and view your favorite artists, genres, and songs!</p>
             <div className="max-w-xs text-center bg-white p-4 rounded-xl border border-gray-400">
-              <button onClick={goToSignup} className="bg-red-700 text-white hover:bg-red-400 hover:text-white px-3 py-2">
+              <button onClick={goToSignup} className="bg-red-700 text-white hover:bg-red-400 hover:text-white px-3 py-2 rounded">
                 Sign Up
               </button>
             </div>

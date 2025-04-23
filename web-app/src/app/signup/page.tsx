@@ -36,7 +36,7 @@ export default function SignupForm() {
       <input value={name} onChange={e => setName(e.target.value)} placeholder="Name" required className="p-2 border border-gray-300 rounded-md text-base focus:outline-none focus:border-blue-500"/>
       <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" required className="p-2 border border-gray-300 rounded-md text-base focus:outline-none focus:border-blue-500"/>
       <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" required className="p-2 border border-gray-300 rounded-md text-base focus:outline-none focus:border-blue-500"/>
-      <button type="submit" className="mt-4 bg-red-500 text-white hover:bg-red-300 hover:text-white p-2 rounded">Sign Up</button>
+      <button type="submit" className="mt-4 bg-red-700 text-white hover:bg-red-400 hover:text-white p-2 rounded">Sign Up</button>
       {message && <p>{message}</p>}
     </form>
     </div>
