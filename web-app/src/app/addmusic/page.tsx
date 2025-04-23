@@ -4,7 +4,7 @@ import SearchItunes from '@/components/SearchItunes';
 const About = () => {
     return (
     <Content>
-    <SearchItunes/>
+     <SearchItunes/>
     </Content>
     )
 };

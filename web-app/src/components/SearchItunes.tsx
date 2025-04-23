@@ -74,10 +74,12 @@ const SearchItunes = () => {
   }
 
   return (
-    <div style={{ padding: '1rem' }}>
-      <h2>🎵 Search iTunes</h2>
+    <div className="flex flex-col items-center min-h-screen bg-white py-3">
 
-      <input
+    <div style={{ padding: '1rem' }} >
+      <h1 className="text-4xl font-bold mb-4 text-center">🎵 Search iTunes</h1>
+
+      <input 
         type="text"
         placeholder="Search for music..."
         value={query}
@@ -99,6 +101,7 @@ const SearchItunes = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };
