@@ -1,6 +1,6 @@
 # 🎵 Jukebox
 #### Group Members: Isabel Beck, Shakine Hardaway, Kevin Hoang, Karsen Phillips
-**Jukebox** aims to enrich UGA students with song discovery and playlist creation. Users will sign up and create an account to store their finds along their musical journey. When logged in, users can search through a catalog, listen to snippets, and add them to their playlist. Otherwise, users who are not signed in can only search for songs to preview and listen to.
+Jukebox aims to enrich the lives of UGA students with song discovery and playlist creation. Users will sign up and create an account to store their finds along their musical journey. When logged in, users can search through a catalog, listen to snippets, and add songs to their playlist while users who are not signed in can only search for songs to preview and listen to.
 ## Getting Started
 
 First, cd into the app folder:
