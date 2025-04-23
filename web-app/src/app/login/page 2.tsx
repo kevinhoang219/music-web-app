@@ -32,7 +32,9 @@ export default function LoginForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="flex flex-col justify-center items-center min-h-screen bg-white py-3">
+      <h1 className="text-4xl font-bold mb-4 text-center">Sign in</h1>
+      <form onSubmit={handleSubmit} className='flex flex-col gap-2 border border-black rounded p-3'>
       {formError && <p className="text-red-500">{formError}</p>}
       {error && <p className="text-red-500">{decodeURIComponent(error)}</p>}
 
@@ -64,6 +66,7 @@ export default function LoginForm() {
         {isLoading ? "Signing In..." : "Sign In"}
       </button>
     </form>
+    </div>
   );
 }
 
