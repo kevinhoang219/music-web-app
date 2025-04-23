@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <nav className="bg-orange-500 text-white px-6 py-4 flex justify-between items-center sticky top-0 z-50">
       {/* App Name */}
-      <Link href="/" className="text-lg font-bold">TuneTribe</Link>
+      <Link href="/" className="text-lg font-bold">Jukebox</Link>
 
       {/* Leaderboard */}
       <div className="flex gap-4 items-center">
