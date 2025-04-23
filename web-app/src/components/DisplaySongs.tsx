@@ -72,7 +72,8 @@ const DisplaySongs = () => {
 
   return (
     <div style={{ padding: '1rem' }}>
-      <h2>📀 My Playlist</h2>
+      <h2 className="text-4xl font-bold mb-4 text-center">📀 My Playlist</h2>
+
       {message && <p>{message}</p>}
 
       {songs.length === 0 ? (
