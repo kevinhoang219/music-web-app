@@ -52,7 +52,7 @@ const SignIn = ({ onAddUser } : signUpProps) => {
        <h1 className="text-4xl font-bold mb-4 text-center">Sign In</h1>
         <form onSubmit={handleSubmission} className='flex flex-col gap-2 border border-black rounded p-3'>
           <label htmlFor="username">Username</label>
-          <input className="p-2 border border-gray-300 rounded-md text-base focus:outline-none focus:border-blue-500"
+          <input className="p-2 border border-gray-300 rounded-md text-base focus:outline-none focus:border-red-500"
             name="username"
             type="text"
             value={formData.username}
@@ -60,7 +60,7 @@ const SignIn = ({ onAddUser } : signUpProps) => {
             placeholder="Enter your username"
           />
           <label htmlFor="password">Password</label>
-          <input className="p-2 border border-gray-300 rounded-md text-base focus:outline-none focus:border-blue-500"
+          <input className="p-2 border border-gray-300 rounded-md text-base focus:outline-none focus:border-red-500"
             name="password"
             type="password"
             value={formData.password}

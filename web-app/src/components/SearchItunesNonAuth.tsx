@@ -47,7 +47,7 @@ const SearchItunesNonAuth = () => {
 
   return (
     <div className="max-w-3xl mx-auto p-6 bg-white rounded-2xl shadow-md mt-8">
-      <h2 className="text-2xl font-bold text-orange-600 mb-4 text-center">🎵 iTunes Music Search</h2>
+      <h2 className="text-2xl font-bold text-red-700 mb-4 text-center">🎵 iTunes Music Search</h2>
 
 
       <div className="flex flex-col sm:flex-row gap-4 items-center mb-6">
@@ -56,11 +56,11 @@ const SearchItunesNonAuth = () => {
           placeholder="Search for music..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
+          className="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
         />
         <button
           onClick={searchItunes}
-          className="px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-md transition duration-200"
+          className="px-4 py-2 bg-red-700 hover:bg-red-300 text-white font-semibold rounded-md transition duration-200"
         >
           Search
         </button>
