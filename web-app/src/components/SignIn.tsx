@@ -49,7 +49,7 @@ const SignIn = ({ onAddUser } : signUpProps) => {
 
     return (
       <div className="flex flex-col justify-center items-center min-h-screen bg-white py-3">
-       <h1 className="text-4xl font-bold mb-4 text-center">Sign in</h1>
+       <h1 className="text-4xl font-bold mb-4 text-center">Sign In</h1>
         <form onSubmit={handleSubmission} className='flex flex-col gap-2 border border-black rounded p-3'>
           <label htmlFor="username">Username</label>
           <input className="p-2 border border-gray-300 rounded-md text-base focus:outline-none focus:border-blue-500"
@@ -67,10 +67,10 @@ const SignIn = ({ onAddUser } : signUpProps) => {
             onChange={updateData}
             placeholder="Enter your password"
           />
-          <button type="submit" disabled={!formData.username || !formData.password} className="mt-4 bg-orange-500 text-white hover:bg-orange-300 hover:text-white p-2 rounded">Sign In</button>
+          <button type="submit" disabled={!formData.username || !formData.password} className="mt-4 bg-red-500 text-white hover:bg-orange-300 hover:text-white p-2 rounded">Sign In</button>
         </form>
         <h2 className='mt-4'>Are you a new user?</h2>
-        <button onClick={gotoSignUp} className="mt-4 bg-orange-500 text-white hover:bg-orange-300 hover:text-white p-2 rounded">Sign up</button>
+        <button onClick={gotoSignUp} className="mt-4 bg-red-700 text-white hover:bg-red-400 hover:text-white p-2 rounded">Sign up</button>
       </div>
   );
 }

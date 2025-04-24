@@ -71,20 +71,23 @@ const DisplaySongs = () => {
   if (status === 'loading') return <p>Loading...</p>;
 
   return (
-    <div style={{ padding: '1rem' }}>
-      <h2>📀 My Playlist</h2>
-      {message && <p>{message}</p>}
+    <div style={{ padding: '1rem' }} >
+      <h2 className="text-4xl font-bold mb-4 text-center">📀 My Playlist</h2>
+
+      {message && <p className='text-center'>{message}</p>}
 
       {songs.length === 0 ? (
-        <p>You don’t have any songs in your playlist yet.</p>
+        <p className='text-center'>You don’t have any songs in your playlist yet.</p>
       ) : (
         <div>
           {songs.map((song) => (
-            <div key={song.trackId} style={{ borderBottom: '1px solid #ccc', padding: '10px 0' }}>
-              <img src={song.artworkUrl} alt={song.trackName} />
-              <p><strong>{song.trackName}</strong> by {song.artistName}</p>
-              <audio controls src={song.previewUrl}></audio>
+            <div key={song.trackId} style={{ margin: '20px', borderBottom: '1px solid #ccc', padding: '18px' }} className='flex flex-col items-center justify-content:space-between border border-gray-300 rounded-md m-3'>
+              <img src={song.artworkUrl} alt={song.trackName} className='mb-1'/>
+              <p className='m-1'><strong>{song.trackName}</strong> by {song.artistName}</p>
+              <audio controls src={song.previewUrl} className='mt-1'></audio>
+              <div>
               <DeleteSong trackId={song.trackId} onDelete={deleteSong} />
+              </div>
             </div>
           ))}
         </div>
