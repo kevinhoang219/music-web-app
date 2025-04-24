@@ -70,7 +70,7 @@ const SignIn = ({ onAddUser } : signUpProps) => {
           <button type="submit" disabled={!formData.username || !formData.password} className="mt-4 bg-red-500 text-white hover:bg-orange-300 hover:text-white p-2 rounded">Sign In</button>
         </form>
         <h2 className='mt-4'>Are you a new user?</h2>
-        <button onClick={gotoSignUp} className="mt-4 bg-red-600 text-white hover:bg-red-300 hover:text-white p-2 rounded">Sign up</button>
+        <button onClick={gotoSignUp} className="mt-4 bg-red-700 text-white hover:bg-red-400 hover:text-white p-2 rounded">Sign up</button>
       </div>
   );
 }

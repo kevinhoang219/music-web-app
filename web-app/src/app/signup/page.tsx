@@ -33,10 +33,10 @@ export default function SignupForm() {
     <div className="flex flex-col justify-center items-center min-h-screen bg-white py-3">
     <h1 className="text-4xl font-bold mb-4 text-center">Sign in</h1>
     <form onSubmit={handleSubmit} className='flex flex-col gap-2 border border-black rounded p-3'>
-      <input value={name} onChange={e => setName(e.target.value)} placeholder="Name" required className="p-2 border border-gray-300 rounded-md text-base focus:outline-none focus:border-red-500"/>
-      <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" required className="p-2 border border-gray-300 rounded-md text-base focus:outline-none focus:border-red-500"/>
-      <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" required className="p-2 border border-gray-300 rounded-md text-base focus:outline-none focus:border-red-500"/>
-      <button type="submit" className="mt-4 bg-red-700 text-white hover:bg-red-500 hover:text-white p-2 rounded">Sign Up</button>
+      <input value={name} onChange={e => setName(e.target.value)} placeholder="Name" required className="p-2 border border-gray-300 rounded-md text-base focus:outline-none focus:border-blue-500"/>
+      <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" required className="p-2 border border-gray-300 rounded-md text-base focus:outline-none focus:border-blue-500"/>
+      <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" required className="p-2 border border-gray-300 rounded-md text-base focus:outline-none focus:border-blue-500"/>
+      <button type="submit" className="mt-4 bg-red-700 text-white hover:bg-red-400 hover:text-white p-2 rounded">Sign Up</button>
       {message && <p>{message}</p>}
     </form>
     </div>
