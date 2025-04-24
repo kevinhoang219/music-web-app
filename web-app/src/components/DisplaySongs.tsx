@@ -81,7 +81,7 @@ const DisplaySongs = () => {
       ) : (
         <div>
           {songs.map((song) => (
-            <div key={song.trackId} style={{ margin: '10px 0', borderBottom: '1px solid #ccc', padding: '18px' }} className='flex flex-col items-center justify-content:space-between border border-gray-300 rounded-md m-3'>
+            <div key={song.trackId} style={{ margin: '20px', borderBottom: '1px solid #ccc', padding: '18px' }} className='flex flex-col items-center justify-content:space-between border border-gray-300 rounded-md m-3'>
               <img src={song.artworkUrl} alt={song.trackName} className='mb-1'/>
               <p className='m-1'><strong>{song.trackName}</strong> by {song.artistName}</p>
               <audio controls src={song.previewUrl} className='mt-1'></audio>
