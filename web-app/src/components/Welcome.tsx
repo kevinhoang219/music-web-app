@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Pic1 from '../assets/recordswHeadphones.jpg';
 import Pic2 from '../assets/coffee.jpg';
 import Pic3 from '../assets/girlListening.jpg';
+import SearchItunesNonAuth from './SearchItunesNonAuth';
 
 const Welcome = () => { 
     const router = useRouter();
@@ -22,6 +23,8 @@ const Welcome = () => {
               </button>
             </div>
         </div>
+
+        <div><SearchItunesNonAuth/></div>
 
         <div className="border-t-4 border-red-700 my-12 w-3/4 mx-auto"></div>
         <h1 className='flex items-center justify-center mt-10 mb-4 text-5xl font-bold text-red-700'>Features</h1>

@@ -20,14 +20,14 @@ const SearchItunes = () => {
   const { data: session, status } = useSession();
   const router = useRouter();
 
-  // 👮‍♀️ Protect this page — redirect if not logged in
-  {/*
+  //Protect this page — redirect if not logged in
+  {
   useEffect(() => {
     if (status === 'unauthenticated') {
       router.push('/');
     }
   }, [status, router]);
-  */}
+  }
 
   const searchItunes = async () => {
     const res = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(query)}&media=music&limit=9`);

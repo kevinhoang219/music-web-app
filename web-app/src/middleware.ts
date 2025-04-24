@@ -1,38 +1,35 @@
+// middleware.ts
 import { NextRequest, NextResponse } from "next/server";
-
-const middleware = (request: NextRequest) => {
-    const { pathname } = request.nextUrl;
-
-    console.log('Restricted route hit: ${pathname}');
-    console.log("Can't go here!");
-    return NextResponse.redirect(new URL("/", request.url));
-};
-
-export const config = {
-    matcher: [
-        "/api/items",
-        "/api/items/:id"
-    ]
-};
-
-export default middleware;
+import { getToken } from "next-auth/jwt";
 
 
-import { auth } from "./auth";
-import { NextResponse } from "next/server";
+// Your secret from .env.local
+const secret = process.env.AUTH_SECRET;
 
-// export default auth((req) => {
-//   const isLoggedIn = !!req.auth?.user;
-//   const protectedRoutes = ["/create-item", "/edit-item"];
 
-//   if (!isLoggedIn && protectedRoutes.some(route => req.nextUrl.pathname.startsWith(route))) {
-//     return NextResponse.redirect(new URL("/", req.url));
-//   }
-// });
+export async function middleware(req: NextRequest) {
+  const token = await getToken({ req, secret });
+  const isAuthenticated = !!token;
 
-// export const config = {
-//   matcher: ["/create-item", "/edit-item/:path*"],
-// };
+
+  const protectedRoutes = ["/create-item", "/edit-item", "/profile", "/api/items"];
+
+
+  const isProtected = protectedRoutes.some((route) =>
+    req.nextUrl.pathname.startsWith(route)
+  );
+
+
+  if (!isAuthenticated && isProtected) {
+    // console.log("Unauthorized access to:", req.nextUrl.pathname);
+    return NextResponse.redirect(new URL("/", req.url));
+  }
+
+
+  return NextResponse.next(); // Allow access
+}
+
+
 
 
 

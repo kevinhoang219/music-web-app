@@ -1,8 +1,10 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+
+import React, { useState } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
+
 
 type ItunesItem = {
   trackName: string;
@@ -13,6 +15,7 @@ type ItunesItem = {
   trackId: number;
 };
 
+
 const SearchItunesNonAuth = () => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<ItunesItem[]>([]);
@@ -20,51 +23,71 @@ const SearchItunesNonAuth = () => {
   const { data: session, status } = useSession();
   const router = useRouter();
 
-  // 👮‍♀️ Protect this page — redirect if not logged in
+
+  const searchItunes = async () => {
+    if (!query.trim()) return;
 
 
-  const SearchItunesNonAuth = async () => {
-    const res = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(query)}&media=music&limit=9`);
+    const res = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(query)}&media=music&limit=5`);
     const data = await res.json();
     setResults(data.results);
+
+
+    if (!data.results.length) {
+      setMessage('No results found');
+      setTimeout(() => setMessage(''), 3000);
+    }
   };
 
- 
-  
-    setTimeout(() => setMessage(''), 3000);
-
-  
-  
-  
-  
-  
 
   if (status === 'loading') {
-    return <p>Loading session...</p>;
+    return <p className="text-center mt-10 text-gray-500">Loading preview...</p>;
   }
 
+
   return (
-    <div style={{ padding: '1rem' }}>
-      <h2>🎵 Search iTunes</h2>
+    <div className="max-w-3xl mx-auto p-6 bg-white rounded-2xl shadow-md mt-8">
+      <h2 className="text-2xl font-bold text-orange-600 mb-4 text-center">🎵 iTunes Music Search</h2>
 
-      <input
-        type="text"
-        placeholder="Search for music..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        style={{ marginRight: '0.5rem' }}
-      />
-      <button onClick={SearchItunesNonAuth}>Search</button>
 
-      {message && <p style={{ marginTop: '1rem' }}>{message}</p>}
+      <div className="flex flex-col sm:flex-row gap-4 items-center mb-6">
+        <input
+          type="text"
+          placeholder="Search for music..."
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          className="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
+        />
+        <button
+          onClick={searchItunes}
+          className="px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-md transition duration-200"
+        >
+          Search
+        </button>
+      </div>
 
-      <div style={{ marginTop: '1.5rem' }}>
-        {results.map((item, i) => (
-          <div key={i} style={{ margin: '10px 0', borderBottom: '1px solid #ddd', paddingBottom: '10px' }}>
-            <img src={item.artworkUrl100} alt={item.trackName} />
-            <p><strong>{item.trackName}</strong> by {item.artistName}</p>
-            <audio controls src={item.previewUrl}></audio>
-            <br />
+
+      {message && (
+        <p className="text-red-500 text-sm mb-4 text-center">{message}</p>
+      )}
+
+
+      <div className="grid gap-6">
+        {results.map((item) => (
+          <div
+            key={item.trackId}
+            className="flex flex-col sm:flex-row items-center gap-4 p-4 border rounded-md hover:shadow-md transition"
+          >
+            <img
+              src={item.artworkUrl100}
+              alt={item.trackName}
+              className="w-24 h-24 rounded-md shadow-sm"
+            />
+            <div className="flex-1">
+              <p className="font-semibold text-lg">{item.trackName}</p>
+              <p className="text-gray-600 text-sm">by {item.artistName}</p>
+              <audio controls src={item.previewUrl} className="mt-2 w-full" />
+            </div>
           </div>
         ))}
       </div>
@@ -72,6 +95,10 @@ const SearchItunesNonAuth = () => {
   );
 };
 
+
 export default SearchItunesNonAuth;
+
+
+
 
 
