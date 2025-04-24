@@ -34,14 +34,14 @@ export default function LoginForm() {
       {formError && <p className="text-red-500">{formError}</p>}
       {error && <p className="text-red-500">{decodeURIComponent(error)}</p>}
 
-      <input className="p-2 border border-gray-300 rounded-md text-base focus:outline-none focus:border-blue-500"
+      <input className="p-2 border border-gray-300 rounded-md text-base focus:outline-none focus:border-red-500"
         type="email"
         placeholder="Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
       />
-      <input className="p-2 border border-gray-300 rounded-md text-base focus:outline-none focus:border-blue-500"
+      <input className="p-2 border border-gray-300 rounded-md text-base focus:outline-none focus:border-red-500"
         type="password"
         placeholder="Password"
         value={password}
